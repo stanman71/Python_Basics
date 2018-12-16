@@ -34,6 +34,7 @@ print("Ich bin " + str(age) + " Jahre alt")
 
 '''
 
+
 # -----------------
 # List
 # -----------------
@@ -81,4 +82,9 @@ i = "Max, Monika, Erik, Franziska"
 print(i.split(", "))
 
 '''
+
+
+# -----------------
+#  Kontrollstrukturen
+# -----------------
 
