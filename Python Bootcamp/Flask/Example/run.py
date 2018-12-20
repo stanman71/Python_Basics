@@ -1,7 +1,11 @@
 # coding=utf-8
+# python main
+
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
+
+# site start
 
 @app.route("/")
 def hello():
@@ -18,11 +22,17 @@ def hello():
 
     return render_template("start.html", person=person, items=items)
 
+
+# site test
+
 @app.route("/test")
 def test():
     name = request.args.get("name")
     age = request.args.get("age")
     return render_template("test.html", name=name, age=age)
+
+
+# site currency
 
 @app.route("/currency")
 def currency():
@@ -44,6 +54,7 @@ def currency():
                            currency2=currency2,
                            table1=table1,
                            table2=table2)
+
 
 if __name__ == '__main__':
     app.run(host="127.0.0.1", port="5000")
