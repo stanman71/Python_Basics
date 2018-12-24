@@ -6,7 +6,8 @@ Bootstrap(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html', site1="site1", site2="site2")
+    return render_template('index.html', site1="sitegfgf1", site2="sitegfgf2")
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
