@@ -1,4 +1,7 @@
 
+
+## Teil 0: Daten einlesen
+
 import pandas as pd
 
 df = pd.read_csv("./Python_Training/Machine Learning/Lineare Regression/CSV/autos_prepared.csv")
@@ -8,7 +11,6 @@ df.head()
 
 ## Teil 1: Scatter-Plot zeichnen
 
-
 import matplotlib.pyplot as plt
 
 plt.scatter(df["kilometer"], df["price"])
@@ -17,7 +19,6 @@ plt.show()
 
 
 ## Teil 2: Lineare Regression ausführen
-
 
 from sklearn.linear_model import LinearRegression
 
@@ -33,14 +34,12 @@ print("Coef: " + str(model.coef_))
 
 ## Teil 3: Werte für unsere Linie vorhersagen
 
-
 predicted = model.predict([[0], [130000]])
 print(predicted)
 
 
 
 ## Teil 4: Linie in Grafik einzeichnen
-
 
 import matplotlib.pyplot as plt
 
@@ -51,7 +50,6 @@ plt.show()
 
 
 ## Teil 5: Vorhersage für 50.000km machen
-
 
 model.predict([[50000]])
 

@@ -1,7 +1,6 @@
 
 
-# Abbild der Einträge
-
+## Teil 0: Einlesen der Daten
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -14,8 +13,7 @@ plt.show()
 
 
 
-# Abbild der Regressionsgerade
-
+## Teil 1: Berechnung der Funktion
 
 from sklearn.linear_model import LinearRegression
 
@@ -32,8 +30,11 @@ print("Coef: " + str(model.coef_))
 print(3143.28481869 + 5071.35242619 * 40)
 
 
-min_x = min(df["Quadratmeter"])
-max_x = max(df["Quadratmeter"])
+
+## Teil 2: Abbildung der Regressionsgerade
+
+min_x = min(df["Quadratmeter"])  # erster Wert als Startpunkt
+max_x = max(df["Quadratmeter"])  # letzter Wert als Endpunkt
 
 predicted = model.predict([[min_x], [max_x]])
 

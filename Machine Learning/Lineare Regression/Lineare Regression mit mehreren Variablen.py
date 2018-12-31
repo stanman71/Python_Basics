@@ -1,25 +1,31 @@
 
+
+## Teil 0: Einlesen der Daten
+
 import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-
-
 
 df = pd.read_csv("./Python_Training/Machine Learning/Lineare Regression/CSV/hotels.csv")
 
 df.head()
 
-
 X = df[["Gewinn", "Quadratmeter"]].values
 Y = df[["Preis in Mio"]].values
 
 
+
+## Teil 1: Aufteilung in Trainings- und Testdaten (hier: 75% / 25%)
+
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+
 X_train, X_test, y_train, y_test = train_test_split(X, Y, random_state = 0, test_size = 0.25)
 
 
+
+## Teil 2: Berechnung der Funktion
+
 model = LinearRegression()
 model.fit(X_train, y_train)
-
 
 print(model.intercept_)
 print(model.coef_)
@@ -28,12 +34,12 @@ print(model.coef_)
 
 
 
-y_test_pred = model.predict(X_test)
+## Teil 3: Ausgabe der Ergebnisse
 
+y_test_pred = model.predict(X_test)
 
 for i in range(0, len(y_test_pred)):
     print(str(y_test_pred[i][0]) + " - " + str(y_test[i][0]))
-
 
 y_test
 
