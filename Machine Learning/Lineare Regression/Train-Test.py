@@ -35,7 +35,7 @@ plt.show()
 
 
 
-## Teil 3: Training des Modells
+## Teil 2: Model trainieren
 
 from sklearn.linear_model import LinearRegression
 

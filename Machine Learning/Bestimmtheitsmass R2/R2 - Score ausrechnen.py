@@ -1,5 +1,6 @@
 
 
+
 ## Teil 0: Einlesen der Daten
 
 import pandas as pd
@@ -16,7 +17,6 @@ Y = df[["Preis in Mio"]].values
 ## Teil 1: Aufteilung in Trainings- und Testdaten (hier: 75% / 25%)
 
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
 
 X_train, X_test, y_train, y_test = train_test_split(X, Y, random_state = 0, test_size = 0.25)
 
@@ -24,23 +24,35 @@ X_train, X_test, y_train, y_test = train_test_split(X, Y, random_state = 0, test
 
 ## Teil 2: Model trainieren
 
+from sklearn.linear_model import LinearRegression
+
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-print(model.intercept_)
-print(model.coef_)
-
-# 6.48370247 + [Gewinn] * 6.39855984e-06 + [Quadrameter] * 3.89642288e-03
-
-
-
-## Teil 3: Ausgabe der Ergebnisse
+print(model)
 
 y_test_pred = model.predict(X_test)
 
-for i in range(0, len(y_test_pred)):
-    print(str(y_test_pred[i][0]) + " - " + str(y_test[i][0]))
-
-y_test
 
 
+## Teil 3a: Bestimmtheitsmaß berechnen, unabhängiger Weg
+
+from sklearn.metrics import r2_score
+
+r2 = r2_score(y_test, y_test_pred)
+print(r2)
+
+# 0 (sehr schlecht) <<<>>> 1 (perfekt)
+
+
+
+## Teil 3b: Bestimmtheitsmaß berechnen, während Modell trainieren
+
+from sklearn.linear_model import LinearRegression
+
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+print(model.score(X_test, y_test))
+
+# 0 (sehr schlecht) <<<>>> 1 (perfekt)

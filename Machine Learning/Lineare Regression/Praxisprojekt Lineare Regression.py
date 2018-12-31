@@ -18,7 +18,7 @@ plt.show()
 
 
 
-## Teil 2: Lineare Regression ausführen
+## Teil 2: Model trainieren
 
 from sklearn.linear_model import LinearRegression
 
