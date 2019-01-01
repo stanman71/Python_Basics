@@ -28,7 +28,7 @@ from sklearn.linear_model import LinearRegression
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-print(model.score(X_test, y_test))
+print(model.score(X_test, y_test)) # Bestimmtheitsmaß R2
 
 
 
@@ -50,7 +50,7 @@ from sklearn.linear_model import LinearRegression
 model = LinearRegression()
 model.fit(X_train_transformed, y_train)
 
-print(model.score(X_test_transformed, y_test))
+print(model.score(X_test_transformed, y_test)) # Bestimmtheitsmaß R2
 
 """ Ausgabe der Spaltenmodifikation (Gibt Hochzahl für jeden Eintrag an) """
 print(pf.powers_)

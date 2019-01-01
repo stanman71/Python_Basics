@@ -34,13 +34,11 @@ print(model.coef_)
 
 
 
-## Teil 3: Ausgabe der Ergebnisse
+## Teil 3: Ausgabe der Ergebnisse (berechnete Ergebnisse vs. reale Ergebnisse)
 
 y_test_pred = model.predict(X_test)
 
 for i in range(0, len(y_test_pred)):
-    print(str(y_test_pred[i][0]) + " - " + str(y_test[i][0]))
-
-y_test
+    print("Berechnet: " + str(y_test_pred[i][0]) + " - Real: " + str(y_test[i][0]))
 
 

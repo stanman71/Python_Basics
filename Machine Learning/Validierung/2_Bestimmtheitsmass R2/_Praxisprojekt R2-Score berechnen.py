@@ -5,7 +5,7 @@
 
 import pandas as pd
 
-df = pd.read_csv("./Python_Training/Machine Learning/Lineare Regression/CSV/autos_prepared.csv")
+df = pd.read_csv("./Python_Training/Machine Learning/Validierung/2_Bestimmtheitsmass R2/CSV/autos_prepared.csv")
 
 
 

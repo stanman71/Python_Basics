@@ -1,11 +1,12 @@
 
 
+# Vereinfachung des Train-Tests
 
 ## Teil 0: Einlesen der Daten
 
 import pandas as pd
 
-df = pd.read_csv("./Python_Training/Machine Learning/Lineare Regression/CSV/hotels.csv")
+df = pd.read_csv("./Python_Training/Machine Learning/Validierung/2_Bestimmtheitsmass R2/CSV/hotels.csv")
 
 df.head()
 

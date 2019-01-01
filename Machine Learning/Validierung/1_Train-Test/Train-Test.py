@@ -1,15 +1,13 @@
 
 
-###################################
-# Dient zur Überprüfung des Modells
-###################################
 
+# Dient zur Überprüfung eines Modells
 
 ## Teil 0: Einlesen der Daten
 
 import pandas as pd
 
-df = pd.read_csv("./Python_Training/Machine Learning/Regression/Lineare Regression/CSV/wohnungspreise.csv")
+df = pd.read_csv("./Python_Training/Machine Learning/Validierung/1_Train-Test/CSV/wohnungspreise.csv")
 df.head()
 
 X = df[["Quadratmeter"]].values
