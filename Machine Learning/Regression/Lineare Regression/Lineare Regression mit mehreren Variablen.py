@@ -4,7 +4,7 @@
 
 import pandas as pd
 
-df = pd.read_csv("./Python_Training/Machine Learning/Lineare Regression/CSV/hotels.csv")
+df = pd.read_csv("./Python_Training/Machine Learning/Regression/Lineare Regression/CSV/hotels.csv")
 
 df.head()
 

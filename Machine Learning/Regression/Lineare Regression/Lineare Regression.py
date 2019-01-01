@@ -5,7 +5,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("./Python_Training/Machine Learning/Lineare Regression/CSV/wohnungspreise.csv")
+df = pd.read_csv("./Python_Training/Machine Learning/Regression/Lineare Regression/CSV/wohnungspreise.csv")
 df.head()
 
 plt.scatter(df["Quadratmeter"], df["Verkaufspreis"])
