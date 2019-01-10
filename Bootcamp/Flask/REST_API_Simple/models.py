@@ -1,9 +1,7 @@
 # pip install sqlalchemy-repr
 #!/usr/bin/env python
 
-from sqlalchemy import Column
-from sqlalchemy import Integer
-from sqlalchemy import String
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()

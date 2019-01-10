@@ -8,14 +8,15 @@
 from flask import Flask
 from flask_restful import Api
 
+from resources import TodoListResource, TodoResource
+
+
 app = Flask(__name__)
 api = Api(app)
 
-from resources import TodoListResource
-from resources import TodoResource
-
 api.add_resource(TodoListResource, '/api/resource', endpoint='users')
 api.add_resource(TodoResource, '/api/resource/<string:id>', endpoint='user')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,21 +1,32 @@
-
 from models import Todo
-from db import session
 
-from flask_restful import reqparse
-from flask_restful import abort
-from flask_restful import Resource
-from flask_restful import fields
-from flask_restful import marshal_with
+from flask_restful import reqparse, abort, Resource, fields, marshal_with
+from sqlalchemy import create_engine
+from sqlalchemy.orm import scoped_session, sessionmaker
+
+
+""" ######## """
+""" database """
+""" ######## """
+
+Session = sessionmaker(autocommit = False,
+                       autoflush  = False,
+                       bind       = create_engine('mysql+pymysql://python:python@localhost/python'))
+session = scoped_session(Session)
 
 todo_fields = {
-    'id': fields.Integer,
+    'id'  : fields.Integer,
     'task': fields.String,
-    'uri': fields.Url('todo', absolute=True),
+    'uri' : fields.Url('todo', absolute=True),
 }
 
 parser = reqparse.RequestParser()
 parser.add_argument('task', type=str)
+
+
+""" ######### """
+""" functions """
+""" ######### """
 
 class TodoResource(Resource):
     @marshal_with(todo_fields)

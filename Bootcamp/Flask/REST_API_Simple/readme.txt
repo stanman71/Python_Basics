@@ -1,4 +1,4 @@
-IN PYTHON IDLE:
+PYTHON Shell:
 
 import requests, json
 
