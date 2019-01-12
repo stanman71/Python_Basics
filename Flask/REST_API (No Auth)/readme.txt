@@ -1,6 +1,11 @@
-PYTHON Shell:
 
-import requests, json
+########
+REST API
+########
+
+IMPORTANT:
+use in pythen shell
+first step: import requests, json 
 
 
 <<< Retrieve list of tasks >>>
@@ -23,9 +28,12 @@ requests.put('http://localhost:5000/todos/1',
 requests.delete('http://localhost:5000/todos/1')
 
 
+#################
 DATABASE (MySQL):
+#################
 
 Database:  python
 Tablename: todos
-          'id'   (Integer)
-          'task' (String)
+          'id'   (Integer, primary_key)
+          'task' (String(80))
+

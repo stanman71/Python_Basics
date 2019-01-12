@@ -16,7 +16,7 @@ class ConfigClass(object):
     SECRET_KEY = 'This is an INSECURE secret!! DO NOT use this in production!!'
 
     # Flask-SQLAlchemy settings
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://python:python@localhost/test_2'    # File-based SQL database
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://python:python@localhost/python'    # File-based SQL database
     SQLALCHEMY_TRACK_MODIFICATIONS = False    # Avoids SQLAlchemy warning
 
     # Flask-User settings

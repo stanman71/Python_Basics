@@ -1,3 +1,8 @@
+
+########
+REST API
+########
+
 IMPORTANT:
 use in pythen shell
 first steps: import requests, json 
@@ -41,11 +46,13 @@ requests.post('http://localhost:5000/api/resource',
 
 
 
+#################
 DATABASE (MySQL):
+#################
 
 Database:  python
 Tablename: user
-           id       (Integer, primary_key=True)
-           username (String(15), unique=True)
-           email    (String(50), unique=True)
+           id       (Integer, primary_key)
+           username (String(15), unique)
+           email    (String(50), unique)
            password (String(80))
