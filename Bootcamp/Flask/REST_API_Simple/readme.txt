@@ -22,3 +22,10 @@ requests.put('http://localhost:5000/todos/1',
 <<< Delete a task >>>
 requests.delete('http://localhost:5000/todos/1')
 
+
+DATABASE (MySQL):
+
+Database:  python
+Tablename: todos
+          'id'   (Integer)
+          'task' (String)

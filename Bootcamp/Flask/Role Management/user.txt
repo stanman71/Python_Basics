@@ -1,0 +1,4 @@
+bob:secret123:producer
+alice:drowssap:producer,consumer
+bill:54321:
+steve:12345:admin

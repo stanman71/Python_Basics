@@ -11,6 +11,7 @@ class Todo(Base):
     """ Database informations """
 
     __tablename__ = 'todos'
+    
     id   = Column(Integer, primary_key=True)
     task = Column(String(80))
 
