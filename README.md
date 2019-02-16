@@ -1,1 +1,1 @@
-This is a summery of python basics.
+This is a summery of python basics and examples.
